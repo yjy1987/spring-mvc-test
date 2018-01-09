@@ -21,7 +21,7 @@
 	<mvc:interceptors>		
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="com.spring.mvc.common.LoggerInterceptor" />
+			<bean class="com.spring.mvc.common.interceptor.LoggerInterceptor" />
 		</mvc:interceptor>		
 	</mvc:interceptors>
      
