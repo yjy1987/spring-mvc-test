@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<settings>
+		<setting name="cacheEnabled"              value="ture"/>  
+        <setting name="lazyLoadingEnabled"        value="false"/>  
+        <setting name="multipleResultSetsEnabled" value="true"/>  
+        <setting name="useColumnLabel"            value="true"/>  
+        <setting name="useGeneratedKeys"          value="false"/>  
+        <setting name="defaultExecutorType"       value="REUSE"/>
+        <setting name="mapUnderscoreToCamelCase"  value="true"/>
+        <!-- <setting name="callSettersOnNulls" 		  value="true"/>  -->
+	</settings>
+
+	<!-- <typeAliases>
+		<typeAlias type="com.kt.gbox.cms.operate.model.UserInfo" 	alias="UserInfo" />
+		<typeAlias type="com.kt.gbox.cms.operate.model.UserDetail" 	alias="UserDetail" />
+    	<typeAlias type="com.kt.gbox.common.web.model.DataMap" 		alias="DataMap" />
+    	<typeAlias type="com.kt.gbox.cms.realtime.model.RealTimeApiStat" 	alias="RealTimeApiStat" />
+    </typeAliases> -->
+    
+    <!-- <typeHandlers>
+		<typeHandler handler="com.kt.gbox.common.support.mybatis.AuthorityTypeHandler" />
+		<typeHandler handler="com.kt.gbox.common.support.mybatis.ConvertBooleanTypeHandler" />
+	</typeHandlers> -->
+	
+<!-- 
+	<plugins>
+        <plugin interceptor="com.kt.gbox.common.support.mybatis.pagenator.OffsetLimitInterceptor">
+            <property name="dialectClass" value="com.kt.gbox.common.support.mybatis.pagenator.dialect.PostgreSQLDialect"/>
+       		<property name="asyncTotalCount" value="true"/>
+        </plugin>
+    </plugins>
+ -->
+    <mappers>
+    	 <mapper resource="sqlmap/com.spring.mvc.test.xml"/>
+    	 <mapper resource="sqlmap/com.spring.mvc.sample.xml"/>
+	</mappers>
+
+</configuration>

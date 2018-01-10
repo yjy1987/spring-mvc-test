@@ -6,7 +6,7 @@
      
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://study.crtrtdxm1hdp.ap-northeast-2.rds.amazonaws.com:3306/study"/>
+        <property name="url" value="jdbc:mysql://study.crtrtdxm1hdp.ap-northeast-2.rds.amazonaws.com:3306/spring_mvc_test"/>
         <property name="username" value="study"/>
         <property name="password" value="study0000"/>
     </bean>
