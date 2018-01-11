@@ -21,10 +21,16 @@
 	<mvc:interceptors>		
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="com.spring.mvc.common.interceptor.LoggerInterceptor" />
+			<bean class="com.spring.common.interceptor.LoggerInterceptor" />
 		</mvc:interceptor>		
 	</mvc:interceptors>
      
+     
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<mvc:resources mapping="/resources/**" 	location="/resources/" />
+	<!-- <mvc:resources mapping="/favicon.ico" 	location="/favicon.ico" /> -->
+	<mvc:resources mapping="/views/**" 		location="/WEB-INF/wiews/" />
+	
     <!-- <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0" /> -->
     <!-- <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" /> -->   
      
@@ -36,5 +42,16 @@
 		<property name="suffix" value=".jsp" />
 		<property name="order" value="2" />
 	</bean>
-		
+	
+	
+	<!-- google Class Bean설정 추가 -->
+	<!-- 클라이언트ID와 보안비밀 세팅-->
+	<bean id="googleConnectionFactory" class="org.springframework.social.google.connect.GoogleConnectionFactory">
+		<constructor-arg value="620932012947-8s9nqr1cq609kig8qfvusadrgrchoosi.apps.googleusercontent.com" />
+		<constructor-arg value="4hocPOf2czDv_z29g6b3GISI" />
+	</bean>
+	
+	<bean id="googleOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
+		<property name="scope" value="https://www.googleapis.com/auth/plus.login" />
+	</bean>
 </beans>

@@ -1,4 +1,4 @@
-package com.spring.mvc.common.dao;
+package com.spring.common.web.dao;
 
 import java.util.List;
 

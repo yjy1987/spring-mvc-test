@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.spring.mvc.common.dao.AbstractDao;
+import com.spring.common.web.dao.AbstractDao;
 
 @Repository("sampleDao")
 public class SampleDao extends AbstractDao {

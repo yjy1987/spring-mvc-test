@@ -10,6 +10,7 @@
 		<config>src/main/resources/config/spring/application-context-servlet.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/main/resources/config/spring/application-context-persistence.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
