@@ -31,4 +31,11 @@ public class MainController extends BaseController{
 		return new ModelAndView("index",map);
 	}
 	
+/*	
+	@RequestMapping("/main")
+	public ModelAndView main() {
+		
+		return new ModelAndView("index",map);
+	}*/
+	
 }

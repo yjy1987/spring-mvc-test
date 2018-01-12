@@ -1,0 +1,39 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- 기본 javascript/css 설정 -->
+	<definition name="base">
+		<put-list-attribute name="styles" >
+	        <add-attribute value="/resources/css/semantic.min.css" 	type="string" />
+	        <add-attribute value="/resources/css/default.css" 	type="string" />
+	        <add-attribute value="/resources/css/pandoc-code-highlight.css" 	type="string" />
+	    </put-list-attribute>
+	    <put-list-attribute name="scripts">
+	        <add-attribute value="/resources/js/jquery-3.2.1.min.js" 	type="string" />
+	        <!-- <add-attribute value="/resources/js/jquery-ui.min.js" 		type="string" />
+	        <add-attribute value="/resources/js/jquery.form.min.js" 	type="string" />
+	        <add-attribute value="/resources/js/jquery.validate.min.js" type="string" />
+	        <add-attribute value="/resources/js/additional-methods.js" 	type="string" />	        	         
+	        <add-attribute value="/resources/js/gbox-ui.js?version=1.1"	type="string" />
+	        <add-attribute value="/resources/js/common.js" 				type="string" /> -->
+	    </put-list-attribute>
+	</definition>
+
+	<!-- 기본 레이아웃 -->
+	<definition name="base.layout"  template="/WEB-INF/views/layout/layout.jsp" extends="base">
+		<put-attribute name="title" 		value="hello_world" type="String"/>
+		<put-attribute name="navi" 			value="/WEB-INF/views/layout/navi.jsp" />
+		<put-attribute name="javascript" 	value="" type="String"/>
+	</definition>
+	
+	<!-- Dashboard용 레이아웃 -->
+	<!-- <definition name="dashboard.layout" template="/WEB-INF/views/layout/layout.jsp" extends="base.layout">
+		<put-list-attribute name="scripts" inherit="true">
+			<add-attribute value="/resources/js/sockjs.min.js" type="string" />
+			<add-attribute value="/resources/js/echarts-all.js" type="string" />
+			<add-attribute value="/resources/js/cms/dashboard.js" type="string" />
+		</put-list-attribute>
+	</definition> -->
+	
+
+</tiles-definitions>
