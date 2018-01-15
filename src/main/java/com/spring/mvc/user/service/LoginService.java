@@ -1,5 +1,8 @@
 package com.spring.mvc.user.service;
 
-public class LoginService {
+import java.util.HashMap;
 
+public interface LoginService {
+
+	void upsertLoginUser (HashMap<String, Object> map) throws Exception;
 }
