@@ -77,6 +77,8 @@ public class LoginController extends BaseController {
 			}
 			Connection<Google> connection = googleConnectionFactory.createConnection(accessGrant);
 			Google google = connection == null ? new GoogleTemplate(accessToken) : connection.getApi();
+			
+			
 			PlusOperations plusOperations = google.plusOperations();
 			Person person = plusOperations.getGoogleProfile();
 			
@@ -99,11 +101,11 @@ public class LoginController extends BaseController {
 			logger.info("getUrl  : {}", person.getUrl());
 			logger.info("getUrls  : {}", person.getUrls());
 			
-			
-			
+			map.put("myDisplayName",person.getDisplayName());
+			map.put("myImage", person.getImageUrl());
 			
 		}
-		return new ModelAndView("user/temp", map);
+		return new ModelAndView("user/temp","map", map);
 	}
 	
 	@RequestMapping(value = "/oauth2callbackResult", method = { RequestMethod.GET, RequestMethod.POST })

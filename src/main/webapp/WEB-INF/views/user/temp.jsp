@@ -12,9 +12,9 @@
 			<div class="row" id="page-header">
 			    <div class="ui basic segment">
 			      <h1 class="ui sub header">
-			        The Semantic-UI Blog
+			          ${map.myDisplayName } 
 			      </h1>
-			      <span>A simple example of creating a blog with Semanti-UI.</span>
+			      <span> ${map.myDisplayName }님, 너무 너무 반갑습니다.</span>
 			    </div>
 			  </div>
 			  <div class="row" id="article">
@@ -151,6 +151,8 @@
       </div>
     </div>
     <div class="four wide right floated column">
+    <img src="${map.myImage}"/>
+    
       <div class="ui secondary segment">
         <h4 class="ui header">
           About
