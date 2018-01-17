@@ -52,7 +52,7 @@
 	</bean>
 	
 	<bean id="googleOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
-		<property name="scope" value="https://www.googleapis.com/auth/plus.login" />
+		<property name="scope" value="email" />
 	</bean>
 	
 	<!-- Tiles 3 -->
